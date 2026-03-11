@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Spiral Gallery</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1500px; /* Adds depth */
+    background-image: url(Images/galaxy\ image.jpg);
+    background-size: cover;
+  }
+
+  .spiral-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+  }
+
+  .spiral-container a {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s, opacity 0.5s;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .spiral-container a img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .spiral-container{
+    display: flex;
+    align-items: center;
+  }
+
+  @keyframes rotate {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+
+  .title{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1.0);
+    font-size: 50pt;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+    <div class="title">
+        <h1>HANK LEAHY'S PHOTO GALAXY</h1>
+    </div>
+    
+
+<div class="spiral-container" id="spiral">
+  <a href="1.htm"><img src="Images/Train station.jpeg" alt="trains"></a>
+  <a href="2.htm"><img src="Images/kite6.jpeg" alt="kites"></a>
+  <a href="3.htm"><img src="Images/SF-2.jpeg" alt="SF"></a>
+  <a href="4.htm"><img src="Images/Hank Leahy-Social Doccumentary Medium.jpeg" alt="Cops"></a>
+  <a href="5.htm"><img src="Images/MLK-Insta-11.jpeg" alt="MLK"></a>
+  <a href="6.htm"><img src="Images/MDC-Jan30-4.jpeg" alt="MDC"></a>
+  <a href="7.htm"><img src="Images/ICE-Out-March-7.jpeg" alt="Protest march7"></a>
+  <a href="8.htm"><img src="Images/ICE-Out-March-9.jpeg" alt="ICE Out March 9"></a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
